@@ -1,0 +1,10 @@
+.socialIconContainer {
+    width: 32px;
+    height: 32px;
+}
+
+.socialIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
