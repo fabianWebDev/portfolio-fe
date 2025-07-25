@@ -1,11 +1,14 @@
 import ProjectCard from "../components/projects/ProjectCard";
 import { useProjects } from "../hooks/useProjects";
+import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
     const { projects } = useProjects();
-
+    const navigate = useNavigate();
     return (
         <div className="container mx-auto px-4 py-8">
+            <Button onClick={() => navigate("/")}>Home</Button>
             <h1 className="text-3xl font-bold text-center mb-8">Mis Proyectos</h1>
 
             {projects.length === 0 ? (
