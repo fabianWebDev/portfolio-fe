@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useContact } from '../../hooks/useContact';
 import type { ContactMessage } from '../../services/contactService';
+import Input from './Input';
 
 const ContactForm = () => {
     const { sendMessage, loading, error, success, reset } = useContact();
@@ -39,7 +40,8 @@ const ContactForm = () => {
     return (
         <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-group">
-                <input
+                <Input
+                    label="Nombre"
                     type="text"
                     name="name"
                     placeholder="Nombre"
@@ -50,7 +52,8 @@ const ContactForm = () => {
             </div>
             
             <div className="form-group">
-                <input
+                <Input
+                    label="Teléfono"
                     type="tel"
                     name="phone"
                     placeholder="Teléfono"
@@ -61,7 +64,8 @@ const ContactForm = () => {
             </div>
             
             <div className="form-group">
-                <input
+                <Input
+                    label="Email"
                     type="email"
                     name="email"
                     placeholder="Email"
@@ -72,7 +76,8 @@ const ContactForm = () => {
             </div>
             
             <div className="form-group">
-                <input
+                <Input
+                    label="Asunto"
                     type="text"
                     name="subject"
                     placeholder="Asunto"
@@ -83,13 +88,14 @@ const ContactForm = () => {
             </div>
             
             <div className="form-group">
-                <textarea
+                <Input
+                    label="Mensaje"
+                    type="text"
                     name="message"
                     placeholder="Mensaje"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={5}
-                    required
+                    required    
                 />
             </div>
             
