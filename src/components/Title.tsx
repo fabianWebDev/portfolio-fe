@@ -1,7 +1,7 @@
 const Title = () => {
     return (
         <div>
-            <h1>Title</h1>
+            <h1>Wizard of Code</h1>
         </div>
     )
 }

@@ -2,14 +2,19 @@ import ProjectCard from "../components/projects/ProjectCard";
 import { useProjects } from "../hooks/useProjects";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import MainFrame from "../components/layout/MainFrame";
+import ButtonsFrame from "../components/layout/ButtonsFrame";
 
 const Projects = () => {
     const { projects } = useProjects();
     const navigate = useNavigate();
     return (
-        <div className="container mx-auto px-4 py-8">
-            <Button onClick={() => navigate("/")}>Home</Button>
-            <h1 className="text-3xl font-bold text-center mb-8">Mis Proyectos</h1>
+        <MainFrame>
+            <ButtonsFrame>
+                <Button onClick={() => navigate("/")}>Home</Button>
+                <Button onClick={() => navigate("/contact")}>Contact</Button>
+            </ButtonsFrame>
+            <h1>Mis Proyectos</h1>
 
             {projects.length === 0 ? (
                 <div className="text-center text-gray-500">
@@ -31,7 +36,7 @@ const Projects = () => {
                     ))}
                 </div>
             )}
-        </div>
+        </MainFrame>
     );
 };
 
