@@ -1,10 +1,12 @@
 import React from 'react'
+import styles from './Input.module.css';
 
-const Input = ({label, type, name, placeholder, value, onChange, required}: {label: string, type: string, name: string, placeholder: string, value: string, onChange: (e: React.ChangeEvent<HTMLInputElement>) => void, required: boolean}) => {
+const Input = ({label, type, name, placeholder, value, onChange, required}: {label?: string, type: string, name: string, placeholder: string, value: string, onChange: (e: React.ChangeEvent<HTMLInputElement>) => void, required: boolean}) => {
   return (
-    <div className="form-group">
-        <label htmlFor={name}>{label}</label>
+    <div className={styles.inputContainer}>
+        {label && <label htmlFor={name}>{label}</label>}
         <input
+            className={styles.input}
             type={type}
             name={name}
             placeholder={placeholder}

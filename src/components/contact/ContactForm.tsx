@@ -3,6 +3,7 @@ import { useContact } from '../../hooks/useContact';
 import type { ContactMessage } from '../../services/contactService';
 import Input from './Input';
 import Button from '../Button';
+import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
     const { sendMessage, loading, error, success, reset } = useContact();
@@ -24,7 +25,7 @@ const ContactForm = () => {
 
     const handleSubmit = async () => {
         await sendMessage(formData);
-        
+
         // Limpiar formulario si el envío fue exitoso
         if (success) {
             setFormData({
@@ -38,10 +39,9 @@ const ContactForm = () => {
     };
 
     return (
-        <form className="contact-form">
-            <div className="form-group">
+        <form className={styles.contactForm}>
+            <div>
                 <Input
-                    label="Nombre"
                     type="text"
                     name="name"
                     placeholder="Nombre"
@@ -50,10 +50,9 @@ const ContactForm = () => {
                     required
                 />
             </div>
-            
-            <div className="form-group">
+
+            <div>
                 <Input
-                    label="Teléfono"
                     type="tel"
                     name="phone"
                     placeholder="Teléfono"
@@ -62,10 +61,9 @@ const ContactForm = () => {
                     required
                 />
             </div>
-            
-            <div className="form-group">
+
+            <div>
                 <Input
-                    label="Email"
                     type="email"
                     name="email"
                     placeholder="Email"
@@ -74,10 +72,9 @@ const ContactForm = () => {
                     required
                 />
             </div>
-            
-            <div className="form-group">
+
+            <div>
                 <Input
-                    label="Asunto"
                     type="text"
                     name="subject"
                     placeholder="Asunto"
@@ -86,29 +83,28 @@ const ContactForm = () => {
                     required
                 />
             </div>
-            
-            <div className="form-group">
+
+            <div>
                 <Input
-                    label="Mensaje"
                     type="text"
                     name="message"
                     placeholder="Mensaje"
                     value={formData.message}
                     onChange={handleChange}
-                    required    
+                    required
                 />
             </div>
-            
+
             <Button onClick={() => handleSubmit()}>
                 {loading ? 'Enviando...' : 'Enviar Mensaje'}
             </Button>
-            
+
             {error && (
                 <div className="error-message">
                     Error: {error}
                 </div>
             )}
-            
+
             {success && (
                 <div className="success-message">
                     ¡Mensaje enviado exitosamente!
