@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useContact } from '../../hooks/useContact';
 import type { ContactMessage } from '../../services/contactService';
 import Input from './Input';
+import Button from '../ui/Button';
 
 const ContactForm = () => {
     const { sendMessage, loading, error, success, reset } = useContact();
@@ -99,9 +100,9 @@ const ContactForm = () => {
                 />
             </div>
             
-            <button type="submit" disabled={loading}>
+            <Button type="submit" disabled={loading}>
                 {loading ? 'Enviando...' : 'Enviar Mensaje'}
-            </button>
+            </Button>
             
             {error && (
                 <div className="error-message">
