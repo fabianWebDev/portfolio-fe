@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useContact } from '../../hooks/useContact';
 import type { ContactMessage } from '../../services/contactService';
 import Input from './Input';
-import Button from '../ui/Button';
+import Button from '../Button';
 
 const ContactForm = () => {
     const { sendMessage, loading, error, success, reset } = useContact();
