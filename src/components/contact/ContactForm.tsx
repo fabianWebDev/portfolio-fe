@@ -22,8 +22,7 @@ const ContactForm = () => {
         }));
     };
 
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
         await sendMessage(formData);
         
         // Limpiar formulario si el envío fue exitoso
@@ -39,7 +38,7 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form className="contact-form">
             <div className="form-group">
                 <Input
                     label="Nombre"
@@ -100,7 +99,7 @@ const ContactForm = () => {
                 />
             </div>
             
-            <Button type="submit" disabled={loading}>
+            <Button onClick={() => handleSubmit()}>
                 {loading ? 'Enviando...' : 'Enviar Mensaje'}
             </Button>
             
