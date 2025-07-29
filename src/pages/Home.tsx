@@ -8,7 +8,7 @@ import IGLogo from "../assets/instagram.png";
 import GithubLogo from "../assets/github.png";
 import LinkedinLogo from "../assets/linkedin.png";
 import ButtonsFrame from "../components/layout/ButtonsFrame";
-import PresentationFrame from "../components/layout/PresentationFrame";
+import SecondaryFrame from "../components/layout/SecondaryFrame";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
 
 const Home = () => {
@@ -26,10 +26,10 @@ const Home = () => {
                 <Button onClick={handleClickProjects}>Projects</Button>
                 <Button onClick={handleClickContact}>Contact</Button>
             </ButtonsFrame>
-            <PresentationFrame>
+            <SecondaryFrame>
                 <Title />
                 <Description />
-            </PresentationFrame>
+            </SecondaryFrame>
             <SocialIconsFrame>
                 <SocialIcon icon={IGLogo} link="https://www.instagram.com" />
                 <SocialIcon icon={GithubLogo} link="https://www.github.com" />

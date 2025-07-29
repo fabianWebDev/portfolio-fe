@@ -1,0 +1,13 @@
+.inputContainer {}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
