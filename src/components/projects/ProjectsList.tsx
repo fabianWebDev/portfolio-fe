@@ -5,13 +5,13 @@ import styles from './ProjectsList.module.css';
 const ProjectsList = () => {
     const { projects } = useProjects();
     return (
-        <div className={styles.projectsList}>
+        <>
             {projects.length === 0 ? (
                 <div className="text-center text-gray-500">
                     No hay proyectos disponibles
                 </div>
             ) : (
-                <div>
+                <div className={styles.projectsListContainer}>
                     {projects.map((project) => (
                         <ProjectCard
                             key={project.id}
@@ -26,7 +26,7 @@ const ProjectsList = () => {
                     ))}
                 </div>
             )}
-        </div>
+        </>
     )
 }
 
