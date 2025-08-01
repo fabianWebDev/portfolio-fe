@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import contactService from '../services/contactService';
-import type { ContactMessage, ContactResponse } from '../services/contactService';
+import type { ContactMessage } from '../services/contactService';
 
 interface UseContactReturn {
     sendMessage: (contactData: ContactMessage) => Promise<void>;
