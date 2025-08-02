@@ -14,7 +14,6 @@ export const useContact = (): UseContactReturn => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState(false);
-    const hola = 'hola';
 
     const sendMessage = async (contactData: ContactMessage) => {
         try {
