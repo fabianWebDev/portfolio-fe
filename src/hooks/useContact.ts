@@ -20,11 +20,10 @@ export const useContact = (): UseContactReturn => {
             setLoading(true);
             setError(null);
             setSuccess(false);
-            
+
             await contactService.sendMessage(contactData);
             setSuccess(true);
         } catch (err: any) {
-            console.error('Error al enviar mensaje de contacto:', err);
             setError(err.message || 'Error al enviar el mensaje');
         } finally {
             setLoading(false);
