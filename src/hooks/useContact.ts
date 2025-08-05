@@ -24,7 +24,7 @@ export const useContact = (): UseContactReturn => {
             await contactService.sendMessage(contactData);
             setSuccess(true);
         } catch (err: any) {
-            setError(err.message || 'Error al enviar el mensaje');
+            setError(err.message || 'Error sending message');
         } finally {
             setLoading(false);
         }
