@@ -22,8 +22,7 @@ export const useProjects = (): UseProjectsReturn => {
             const projectsData = await projectService.getProjects();
             setProjects(projectsData);
         } catch (err: any) {
-            console.error('Error al cargar proyectos:', err);
-            setError(err.message || 'Error al cargar los proyectos');
+            setError(err.message || 'Error loading projects');
         } finally {
             setLoading(false);
         }
