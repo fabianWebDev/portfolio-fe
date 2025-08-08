@@ -1,0 +1,11 @@
+body {
+    background: #4a124a;
+    background: linear-gradient(144deg, rgba(74, 18, 74, 1) 0%, rgba(84, 116, 168, 1) 60%, rgba(52, 146, 153, 1) 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
