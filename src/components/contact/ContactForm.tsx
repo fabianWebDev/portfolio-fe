@@ -39,62 +39,47 @@ const ContactForm = () => {
     };
 
     return (
-        <form className={styles.contactForm}>
-            <div>
-                <Input
-                    type="text"
-                    name="name"
-                    placeholder="Nombre"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
-            <div>
-                <Input
-                    type="tel"
-                    name="phone"
-                    placeholder="Teléfono"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
-            <div>
-                <Input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
-            <div>
-                <Input
-                    type="text"
-                    name="subject"
-                    placeholder="Asunto"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
-            <div>
-                <Input
-                    type="text"
-                    name="message"
-                    placeholder="Mensaje"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                />
-            </div>
-
+        <form className={styles.contactForm + " col-xl-4"}>
+            <Input
+                type="text"
+                name="name"
+                placeholder="Nombre"
+                value={formData.name}
+                onChange={handleChange}
+                required
+            />
+            <Input
+                type="tel"
+                name="phone"
+                placeholder="Teléfono"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+            />
+            <Input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+            />
+            <Input
+                type="text"
+                name="subject"
+                placeholder="Asunto"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+            />
+            <Input
+                type="text"
+                name="message"
+                placeholder="Mensaje"
+                value={formData.message}
+                onChange={handleChange}
+                required
+            />
             <Button onClick={() => handleSubmit()}>
                 {loading ? 'Enviando...' : 'Enviar Mensaje'}
             </Button>
