@@ -1,6 +1,8 @@
+import styles from './Button.module.css';
+
 const Button = ({ children, onClick }: { children: React.ReactNode, onClick: () => void }) => {
     return (
-        <button className="btn btn-primary" onClick={onClick}>{children}</button>
+        <button className={styles.button} onClick={onClick}>{children}</button>
     )
 }
 
