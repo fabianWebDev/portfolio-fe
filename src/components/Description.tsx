@@ -4,9 +4,24 @@ const Description = () => {
     return (
         <div className={styles.descriptionContainer}>
             <p className={styles.description}>
-                Hi, I’m Fabián Campos — a software engineer with more than 6 years of experience building solid, intuitive, and results-driven web solutions. I specialize in backend development with Python and Django, as well as frontend development with React. I enjoy turning complex ideas into clean, functional, and well-structured applications by combining logic, design, and best development practices.
+                Hi, I’m <span className={styles.highlight}>Fabián Campos</span> — a software engineer with more than
+                <span className={styles.highlight}> 6 years</span> of experience building
+                <span className={styles.highlight}> solid, intuitive, and results-driven</span> web solutions.
+                I specialize in <span className={styles.highlight}>backend development with Python and Django</span>,
+                as well as <span className={styles.highlight}>frontend development with React</span>.
+                I enjoy turning complex ideas into clean, functional, and well-structured applications by combining
+                <span className={styles.highlight}> logic</span>, <span className={styles.highlight}>design</span>,
+                and <span className={styles.highlight}>best development practices</span>.
                 <br />
-                <span>Wizard of Code</span> isn’t just a catchy name with a magical ring to it — it’s a work philosophy: solving problems efficiently, sustainably, and with purpose. I believe software is a tool to improve lives, streamline processes, and connect people. I fully commit to every project, bringing both technical and human insight, because it’s not just about making things work — it’s about making them work well and with meaning.
+                <br />
+                <span className={styles.highlightBig}>Wizard of Code</span> isn’t just a catchy name —
+                it’s my work philosophy: <span className={styles.highlight}>solving problems efficiently, sustainably, and with purpose</span>.
+                I believe software is a tool to <span className={styles.highlight}>improve lives</span>,
+                <span className={styles.highlight}>streamline processes</span>, and
+                <span className={styles.highlight}>connect people</span>.
+                I fully commit to every project, bringing both technical and human insight — because it’s
+                <span className={styles.highlight}>not just about making things work</span>,
+                it’s about <span className={styles.highlight}>making them work well and with meaning</span>.
             </p>
         </div>
     )

@@ -10,3 +10,23 @@
     text-align: start;
     margin: 0 auto;
 }
+
+.highlight {
+    color: #ffd700;
+    font-weight: 700;
+}
+
+.highlightBig {
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* .highlightBig:hover,
+.highlight:hover {
+    background: #6DCFF6;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00FF9C;
+    cursor: pointer;
+    color: #001aff;
+} */
