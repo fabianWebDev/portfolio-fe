@@ -18,9 +18,9 @@ const Description = () => {
                 it’s my work philosophy: <span className={styles.highlight}>solving problems efficiently, sustainably, and with purpose</span>.
                 I believe software is a tool to <span className={styles.highlight}>improve lives</span>,
                 <span className={styles.highlight}>streamline processes</span>, and
-                <span className={styles.highlight}>connect people</span>.
+                <span className={styles.highlight}> connect people</span>.
                 I fully commit to every project, bringing both technical and human insight — because it’s
-                <span className={styles.highlight}>not just about making things work</span>,
+                <span className={styles.highlight}> not just about making things work</span>,
                 it’s about <span className={styles.highlight}>making them work well and with meaning</span>.
             </p>
         </div>
