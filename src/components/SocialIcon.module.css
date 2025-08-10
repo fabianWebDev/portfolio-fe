@@ -4,7 +4,11 @@
 }
 
 .socialIcon {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.socialIcon:hover {
+    color: #ffd700;
+    transition: color 0.2s ease-in-out;
 }

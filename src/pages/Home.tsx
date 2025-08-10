@@ -4,12 +4,10 @@ import MainFrame from "../components/layout/MainFrame";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import SocialIcon from "../components/SocialIcon";
-import IGLogo from "../assets/instagram.png";
-import GithubLogo from "../assets/github.png";
-import LinkedinLogo from "../assets/linkedin.png";
 import ButtonsFrame from "../components/layout/ButtonsFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
     const navigate = useNavigate();
@@ -29,14 +27,18 @@ const Home = () => {
             <SecondaryFrame>
                 <Title />
                 <Description />
-                
             </SecondaryFrame>
             <SocialIconsFrame>
-                    <SocialIcon icon={IGLogo} link="https://www.instagram.com" />
-                    <SocialIcon icon={GithubLogo} link="https://www.github.com" />
-                    <SocialIcon icon={LinkedinLogo} link="https://www.linkedin.com" />
-                </SocialIconsFrame>
-
+                <SocialIcon link="https://www.github.com">
+                    <FaGithub />
+                </SocialIcon>
+                <SocialIcon link="https://www.linkedin.com">
+                    <FaLinkedin />
+                </SocialIcon>
+                <SocialIcon link="https://www.instagram.com">
+                    <FaInstagram />
+                </SocialIcon>
+            </SocialIconsFrame>
         </MainFrame>
     )
 }
