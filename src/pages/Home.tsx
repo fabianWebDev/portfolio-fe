@@ -29,12 +29,13 @@ const Home = () => {
             <SecondaryFrame>
                 <Title />
                 <Description />
+                <SocialIconsFrame>
+                    <SocialIcon icon={IGLogo} link="https://www.instagram.com" />
+                    <SocialIcon icon={GithubLogo} link="https://www.github.com" />
+                    <SocialIcon icon={LinkedinLogo} link="https://www.linkedin.com" />
+                </SocialIconsFrame>
             </SecondaryFrame>
-            <SocialIconsFrame>
-                <SocialIcon icon={IGLogo} link="https://www.instagram.com" />
-                <SocialIcon icon={GithubLogo} link="https://www.github.com" />
-                <SocialIcon icon={LinkedinLogo} link="https://www.linkedin.com" />
-            </SocialIconsFrame>
+
         </MainFrame>
     )
 }
