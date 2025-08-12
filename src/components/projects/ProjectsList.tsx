@@ -4,8 +4,9 @@ import styles from './ProjectsList.module.css';
 
 const ProjectsList = () => {
     const { projects } = useProjects();
+    console.log(projects);
     return (
-        <>
+        <div className={styles.projectsList}>
             {projects.length === 0 ? (
                 <div className="text-center text-gray-500">
                     No hay proyectos disponibles
@@ -26,7 +27,7 @@ const ProjectsList = () => {
                     ))}
                 </div>
             )}
-        </>
+        </div>
     )
 }
 
