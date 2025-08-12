@@ -32,12 +32,12 @@ const ProjectCard = ({
             }}
         >
             <div className={styles.contentOverlay}>
-                <h3>{title}</h3>
-                <div>
-                    <p>{description}</p>
+                <h3 className={styles.cardTitle}>{title}</h3>
+                <div className={styles.cardDescriptionContainer}>
+                    <p className={styles.cardDescription}>{description}</p>
 
                     {technologies.length > 0 && (
-                        <div className={styles.technologies}>
+                        <div className={styles.technologiesContainer}>
                             {technologies.map((tech, index) => (
                                 <span key={index} className={styles.techTag}>
                                     {tech}

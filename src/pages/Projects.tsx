@@ -14,7 +14,7 @@ const Projects = () => {
                 <Button onClick={() => navigate("/contact")}>Contact</Button>
             </ButtonsFrame>
             <SecondaryFrame>
-                <h1>Mis Proyectos</h1>
+                <h1>Projects</h1>
                 <ProjectsList />
             </SecondaryFrame>
         </MainFrame>
