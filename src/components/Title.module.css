@@ -74,15 +74,10 @@
 
 
 .magicLogo:hover {
-    animation: sway 0.6s ease-in-out infinite alternate;
+    animation: wandWave 0.6s ease-in-out infinite alternate;
     transform-origin: center;
 }
 
-@keyframes sway {
-    0%   { transform: rotate(-10deg); }
-    50%  { transform: rotate(10deg); }
-    100% { transform: rotate(-10deg); }
-}
 
 /* Movimiento de varita */
 @keyframes wandWave {
