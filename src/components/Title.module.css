@@ -14,9 +14,83 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Aparición mágica sin cambio de color + glow al final + flotación */
+.magicTitle {
+    opacity: 0;
+    color: #ffffff;
+    animation:
+        appearNoColor 2s ease forwards,
+        float 3s ease-in-out infinite 2s,
+        glowOn 1s ease forwards 2s;
+}
+
+/* Animación aparición sin cambiar color */
+@keyframes appearNoColor {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Glow dorado al final */
+@keyframes glowOn {
+    from {
+        text-shadow: none;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ffd700,
+            0 0 20px #ffd700,
+            0 0 30px #ffd700,
+            0 0 40px #ffd700;
+    }
+}
+
+/* Flotación suave (solo para el título) */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
 .logo {
     width: 75px;
     height: 75px;
+}
+
+/* Movimiento de varita inicial */
+.magicLogo {
+    animation: wandWave 1.5s ease-in-out 1;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.magicLogo:hover {
+    animation: sway 0.6s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes sway {
+    0%   { transform: rotate(-10deg); }
+    50%  { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+}
+
+/* Movimiento de varita */
+@keyframes wandWave {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
 }
 
 @media (max-width: 768px) {
