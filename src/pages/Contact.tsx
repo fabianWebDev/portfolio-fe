@@ -14,7 +14,7 @@ const Contact = () => {
                 <Button onClick={() => navigate("/projects")}>Projects</Button>
             </ButtonsFrame>
             <SecondaryFrame>
-                <h1>Contact</h1>
+                <h1 className="text-white">Contact</h1>
                 <ContactForm />
             </SecondaryFrame>
         </MainFrame>
