@@ -22,54 +22,62 @@ const ProjectCard = ({
     const imageUrl = image || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzljYWE4ZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlbiBubyBkaXNwb25pYmxlPC90ZXh0Pjwvc3ZnPg==';
 
     return (
-        <div className={styles.projectCard}>
-            <h3>{title}</h3>
-            <div>
-                <img src={imageUrl} alt={title} />
-            </div>
-
-            <div>
-
-                <p>{description}</p>
-
-                {technologies.length > 0 && (
-                    <div>
-                        {technologies.map((tech, index) => (
-                            <span key={index}>
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
-                )}
-
+        <div 
+            className={styles.projectCard}
+            style={{
+                backgroundImage: `url(${imageUrl})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
+            <div className={styles.contentOverlay}>
+                <h3>{title}</h3>
                 <div>
-                    {liveUrl && (
-                        <a
-                            href={liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            🌐 Live Demo
-                        </a>
+                    <p>{description}</p>
+
+                    {technologies.length > 0 && (
+                        <div className={styles.technologies}>
+                            {technologies.map((tech, index) => (
+                                <span key={index} className={styles.techTag}>
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
                     )}
 
-                    {githubUrl && (
+                    <div className={styles.links}>
+                        {liveUrl && (
+                            <a
+                                href={liveUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.link}
+                            >
+                                🌐 Live Demo
+                            </a>
+                        )}
+
+                        {githubUrl && (
+                            <a
+                                href={githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles.link}
+                            >
+                                GitHub
+                            </a>
+                        )}
+
                         <a
-                            href={githubUrl}
+                            href={link}
                             target="_blank"
                             rel="noopener noreferrer"
+                            className={styles.link}
                         >
-                            GitHub
+                            Ver Proyecto
                         </a>
-                    )}
-
-                    <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Ver Proyecto
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
