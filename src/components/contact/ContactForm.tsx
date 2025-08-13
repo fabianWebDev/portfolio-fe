@@ -3,7 +3,7 @@ import { useContact } from '../../hooks/useContact';
 import type { ContactMessage } from '../../services/contactService';
 import Input from './Input';
 import TextArea from './TextArea';
-import Button from '../Button';
+import Button from '../button/Button';
 import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -61,7 +61,7 @@ const ContactForm = () => {
                 required
                 rows={5}
             />
-            <Button onClick={() => handleSubmit()}>
+            <Button onClick={() => handleSubmit()} variant="primary">
                 {loading ? 'Sending...' : 'Send Message'}
             </Button>
 
