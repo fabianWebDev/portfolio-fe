@@ -16,7 +16,9 @@ const Contact = () => {
             <SecondaryFrame>
                 <h1 className="text-white">Contact</h1>
                 <ContactForm />
+                <a href="/" className="text-white">Go back to home</a>
             </SecondaryFrame>
+            
         </MainFrame>
     )
 }
