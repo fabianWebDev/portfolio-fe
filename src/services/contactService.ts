@@ -3,9 +3,7 @@ import apiService from './axiosService';
 // Define the interface for the contact message
 export interface ContactMessage {
     name: string;
-    phone: string;
     email: string;
-    subject: string;
     message: string;
 }
 
@@ -13,9 +11,7 @@ export interface ContactMessage {
 export interface ContactResponse {
     id: number;
     name: string;
-    phone: string;
     email: string;
-    subject: string;
     message: string;
     created_at: string;
 }
