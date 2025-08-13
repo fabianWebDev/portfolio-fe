@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
+import Button from "../components/button/Button";
 import ContactForm from "../components/contact/ContactForm";
 import ButtonsFrame from "../components/layout/ButtonsFrame";
 import MainFrame from "../components/layout/MainFrame";
@@ -10,13 +10,13 @@ const Contact = () => {
     return (
         <MainFrame>
             <ButtonsFrame>
-                <Button onClick={() => navigate("/")}>Home</Button>
-                <Button onClick={() => navigate("/projects")}>Projects</Button>
+                <Button onClick={() => navigate("/")} variant="secondary">Home</Button>
+                <Button onClick={() => navigate("/projects")} variant="secondary">Projects</Button>
             </ButtonsFrame>
             <SecondaryFrame>
-                <h1 className="text-white">Contact</h1>
+                <h1 className="text-white mb-4">Contact</h1>
                 <ContactForm />
-                <a href="/" className="text-white">Go back to home</a>
+                <Button onClick={() => navigate("/")} variant="secondary">Go back to home</Button>
             </SecondaryFrame>
             
         </MainFrame>
