@@ -1,9 +1,30 @@
 .button {
-    background-color: #3FA9F5;
-    color: #F5F5F5;
+    background-color: inherit;
+    color: #ffffff;
     font-size: 1rem;
     border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.4s ease;
+    z-index: 1;
+}
+
+.button:hover::before {
+    width: 100%;
+}
+
+.button:hover {
+    text-decoration: none;
 }
