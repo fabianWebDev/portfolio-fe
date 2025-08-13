@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useContact } from '../../hooks/useContact';
 import type { ContactMessage } from '../../services/contactService';
 import Input from './Input';
+import TextArea from './TextArea';
 import Button from '../Button';
 import styles from './ContactForm.module.css';
 
@@ -9,9 +10,7 @@ const ContactForm = () => {
     const { sendMessage, loading, error, success, reset } = useContact();
     const [formData, setFormData] = useState<ContactMessage>({
         name: '',
-        phone: '',
         email: '',
-        subject: '',
         message: ''
     });
 
@@ -30,9 +29,7 @@ const ContactForm = () => {
         if (success) {
             setFormData({
                 name: '',
-                phone: '',
                 email: '',
-                subject: '',
                 message: ''
             });
         }
@@ -43,16 +40,8 @@ const ContactForm = () => {
             <Input
                 type="text"
                 name="name"
-                placeholder="Nombre"
+                placeholder="Name"
                 value={formData.name}
-                onChange={handleChange}
-                required
-            />
-            <Input
-                type="tel"
-                name="phone"
-                placeholder="Teléfono"
-                value={formData.phone}
                 onChange={handleChange}
                 required
             />
@@ -64,24 +53,16 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
             />
-            <Input
-                type="text"
-                name="subject"
-                placeholder="Asunto"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-            />
-            <Input
-                type="text"
+            <TextArea
                 name="message"
-                placeholder="Mensaje"
+                placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
                 required
+                rows={5}
             />
             <Button onClick={() => handleSubmit()}>
-                {loading ? 'Enviando...' : 'Enviar Mensaje'}
+                {loading ? 'Sending...' : 'Send Message'}
             </Button>
 
             {error && (
@@ -89,10 +70,9 @@ const ContactForm = () => {
                     Error: {error}
                 </div>
             )}
-
             {success && (
                 <div className="success-message">
-                    ¡Mensaje enviado exitosamente!
+                    Message sent successfully!
                 </div>
             )}
         </form>

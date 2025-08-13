@@ -1,15 +1,41 @@
 .inputContainer {
     width: 100%;
+    position: relative;
 }
 
 .input {
-    width: 100%;
+    width: 50%;
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc77;
     border-radius: 0.25rem;
     font-size: 1rem;
-    color: #333;
-    background-color: #fff;
+    background-color: inherit;
     outline: none;
-    transition: border-color 0.3s ease;
+    color: #ffffff;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Placeholder color y transición */
+.input::placeholder {
+    color: #cccccc77;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto al enfocar */
+.input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 10px #ffd70077, 0 0 20px #ffd70033;
+}
+
+/* Placeholder animado al enfocar */
+.input:focus::placeholder {
+    color: #ffd700aa;
+    transform: translateX(4px); /* Pequeño movimiento elegante */
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .input {
+        width: 100%;
+    }
 }
