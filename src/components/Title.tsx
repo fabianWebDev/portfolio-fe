@@ -1,11 +1,27 @@
 import logo from '../assets/wizard.png';
 import styles from './Title.module.css';
 
-const Title = () => {
+interface TitleProps {
+    variant?: 'primary' | 'secondary';
+    text?: string;
+    showLogo?: boolean;
+}
+
+const Title = ({ variant = 'primary', text = 'Wizard of Code', showLogo = true }: TitleProps) => {
+    const titleClass = variant === 'primary' 
+        ? `${styles.title} ${styles.magicTitle}` 
+        : `${styles.title} ${styles.secondaryTitle}`;
+    
+    const logoClass = variant === 'primary' 
+        ? `${styles.logo} ${styles.magicLogo}` 
+        : `${styles.logo} ${styles.secondaryLogo}`;
+
     return (
         <div className={styles.titleContainer}>
-            <h1 className={`${styles.title} ${styles.magicTitle}`}>Wizard of Code</h1>
-            <img src={logo} alt="logo" className={`${styles.logo} ${styles.magicLogo}`} />
+            <h1 className={titleClass}>{text}</h1>
+            {showLogo && (
+                <img src={logo} alt="logo" className={logoClass} />
+            )}
         </div>
     );
 }
