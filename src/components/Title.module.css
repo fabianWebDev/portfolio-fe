@@ -23,6 +23,20 @@
         glowOn 1s ease forwards 2s;
 }
 
+/* Estilo secundario más sutil */
+.secondaryTitle {
+    opacity: 1;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.secondaryTitle:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
 /* Animación aparición sin cambiar color */
 @keyframes appearNoColor {
     0% {
@@ -71,6 +85,18 @@
     transition: transform 0.3s ease;
 }
 
+/* Logo secundario más estático */
+.secondaryLogo {
+    width: 60px;
+    height: 60px;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.secondaryLogo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
 
 .magicLogo:hover {
     animation: wandWave 0.6s ease-in-out infinite alternate;
