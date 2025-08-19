@@ -5,9 +5,10 @@ interface TitleProps {
     variant?: 'primary' | 'secondary';
     text?: string;
     showLogo?: boolean;
+    titleLogo?: any;
 }
 
-const Title = ({ variant = 'primary', text = 'Wizard of Code', showLogo = true }: TitleProps) => {
+const Title = ({ variant = 'primary', text = 'Wizard of Code', showLogo = true, titleLogo = logo }: TitleProps) => {
     const titleClass = variant === 'primary' 
         ? `${styles.title} ${styles.magicTitle}` 
         : `${styles.title} ${styles.secondaryTitle}`;
@@ -20,7 +21,7 @@ const Title = ({ variant = 'primary', text = 'Wizard of Code', showLogo = true }
         <div className={styles.titleContainer}>
             <h1 className={titleClass}>{text}</h1>
             {showLogo && (
-                <img src={logo} alt="logo" className={logoClass} />
+                <img src={titleLogo} alt="logo" className={logoClass} />
             )}
         </div>
     );
