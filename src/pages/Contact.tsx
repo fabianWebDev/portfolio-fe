@@ -5,6 +5,7 @@ import ButtonsFrame from "../components/layout/ButtonsFrame";
 import MainFrame from "../components/layout/MainFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import Title from "../components/Title";
+import logo from "../assets/magic-ball.png";
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Contact = () => {
                 <Button onClick={() => navigate("/projects")} variant="secondary">Projects</Button>
             </ButtonsFrame>
             <SecondaryFrame>
-                <Title variant="secondary" text="Contact" />
+                <Title variant="secondary" text="Contact" titleLogo={logo} />
                 <ContactForm />
                 <Button onClick={() => navigate("/")} variant="secondary">Go back to home</Button>
             </SecondaryFrame>

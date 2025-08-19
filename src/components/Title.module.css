@@ -13,7 +13,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* Aparición mágica sin cambio de color + glow al final + flotación */
 .magicTitle {
     opacity: 0;
     color: #ffffff;
@@ -23,21 +22,11 @@
         glowOn 1s ease forwards 2s;
 }
 
-/* Estilo secundario más sutil */
 .secondaryTitle {
-    opacity: 1;
     color: #ffffff;
     font-size: 2.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
 }
 
-.secondaryTitle:hover {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-
-/* Animación aparición sin cambiar color */
 @keyframes appearNoColor {
     0% {
         opacity: 0;
@@ -50,7 +39,6 @@
     }
 }
 
-/* Glow dorado al final */
 @keyframes glowOn {
     from {
         text-shadow: none;
@@ -65,7 +53,6 @@
     }
 }
 
-/* Flotación suave (solo para el título) */
 @keyframes float {
 
     0%,
@@ -90,15 +77,8 @@
 }
 
 .secondaryLogo {
-    width: 60px;
-    height: 60px;
-    opacity: 0.8;
-    transition: all 0.3s ease;
-}
-
-.secondaryLogo:hover {
-    opacity: 1;
-    transform: scale(1.1);
+    width: 48px;
+    height: 48px;
 }
 
 .magicLogo:hover {
@@ -107,7 +87,6 @@
 }
 
 
-/* wand wave */
 @keyframes wandWave {
     0% {
         transform: rotate(0deg);

@@ -5,6 +5,7 @@ import ButtonsFrame from "../components/layout/ButtonsFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import ProjectsList from "../components/projects/ProjectsList";
 import Title from "../components/Title";
+import logo from "../assets/magic-wand.png";
 
 const Projects = () => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Projects = () => {
                 <Button onClick={() => navigate("/contact")} variant="secondary">Contact</Button>
             </ButtonsFrame>
             <SecondaryFrame>
-                <Title variant="secondary" text="Projects" />
+                <Title variant="secondary" text="Projects" titleLogo={logo} />
                 <ProjectsList />
             </SecondaryFrame>
         </MainFrame>
