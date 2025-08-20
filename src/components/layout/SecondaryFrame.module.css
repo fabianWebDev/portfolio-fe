@@ -3,8 +3,24 @@
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    width: 75%;
+    max-width: 75%;
+    width: 100%;
     margin: 0 auto;
     padding: 4rem 0;
+    box-sizing: border-box;
+}
 
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .secondaryFrame {
+        max-width: 90%;
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .secondaryFrame {
+        max-width: 95%;
+        padding: 2rem 0;
+    }
 }

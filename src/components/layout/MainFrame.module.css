@@ -1,5 +1,28 @@
 .mainFrame {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .mainFrame {
+        max-width: 95%;
+        padding: 1rem 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainFrame {
+        max-width: 100%;
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainFrame {
+        padding: 0.75rem 0.25rem;
+    }
 }
