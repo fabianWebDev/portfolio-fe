@@ -4,7 +4,7 @@ import ContactForm from "../components/contact/ContactForm";
 import MainFrame from "../components/layout/MainFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import Title from "../components/Title";
-import logo from "../assets/magic-ball.png";
+import logo from "../assets/magic-ball-pixel.png";
 import Navbar from "../components/layout/Navbar";
 
 const Contact = () => {
