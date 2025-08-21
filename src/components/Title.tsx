@@ -1,4 +1,4 @@
-import logo from '../assets/wizard.png';
+import logo from '../assets/wizard-pixel.png';
 import styles from './Title.module.css';
 
 interface TitleProps {
