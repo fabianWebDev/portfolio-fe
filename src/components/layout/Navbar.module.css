@@ -1,0 +1,132 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbarLogo {
+    display: flex;
+    align-items: center;
+}
+
+.logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.logoLink:hover {
+    transform: scale(1.05);
+}
+
+.navbarLogo img {
+    height: 40px;
+    width: auto;
+}
+
+.navbarLogo h1 {
+    margin: 0 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbarButtons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navButton {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.navButton::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.4s ease;
+    z-index: 1;
+}
+
+.navButton:hover::before {
+    width: 100%;
+}
+
+.navButton:hover {
+    color: #ffd700;
+    transform: translateY(-1px);
+}
+
+.navButton.active {
+    color: #ffd700;
+}
+
+.navButton.active::before {
+    width: 100%;
+}
+
+/* Responsive breakpoints matching MainFrame */
+@media (max-width: 1200px) {
+    .navbarContainer {
+        max-width: 95%;
+        padding: 1rem 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarContainer {
+        max-width: 100%;
+        padding: 1rem 0.5rem;
+    }
+    
+    .navbarButtons {
+        gap: 0.5rem;
+    }
+    
+    .navButton {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarContainer {
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .navbarLogo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .navbarLogo img {
+        height: 32px;
+    }
+}

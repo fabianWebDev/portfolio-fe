@@ -1,29 +1,16 @@
 import Title from "../components/Title";
 import Description from "../components/Description";
 import MainFrame from "../components/layout/MainFrame";
-import Button from "../components/button/Button";
-import { useNavigate } from "react-router-dom";
 import SocialIcon from "../components/SocialIcon";
-import ButtonsFrame from "../components/layout/ButtonsFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import Navbar from "../components/layout/Navbar";
 
 const Home = () => {
-    const navigate = useNavigate();
-
-    const handleClickProjects = () => {
-        navigate("/projects");
-    }
-    const handleClickContact = () => {
-        navigate("/contact");
-    }
     return (
         <MainFrame>
-            <ButtonsFrame>
-                <Button onClick={handleClickProjects} variant="secondary">Projects</Button>
-                <Button onClick={handleClickContact} variant="secondary">Contact</Button>
-            </ButtonsFrame>
+            <Navbar />
             <SecondaryFrame>
                 <Title />
                 <Description />

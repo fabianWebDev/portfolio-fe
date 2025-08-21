@@ -1,20 +1,14 @@
-import Button from "../components/button/Button";
-import { useNavigate } from "react-router-dom";
 import MainFrame from "../components/layout/MainFrame";
-import ButtonsFrame from "../components/layout/ButtonsFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import ProjectsList from "../components/projects/ProjectsList";
 import Title from "../components/Title";
 import logo from "../assets/magic-wand.png";
+import Navbar from "../components/layout/Navbar";
 
 const Projects = () => {
-    const navigate = useNavigate();
     return (
         <MainFrame>
-            <ButtonsFrame>
-                <Button onClick={() => navigate("/")} variant="secondary">Home</Button>
-                <Button onClick={() => navigate("/contact")} variant="secondary">Contact</Button>
-            </ButtonsFrame>
+            <Navbar />
             <SecondaryFrame>
                 <Title variant="secondary" text="Projects" titleLogo={logo} />
                 <ProjectsList />
