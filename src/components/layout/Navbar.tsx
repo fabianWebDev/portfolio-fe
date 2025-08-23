@@ -18,12 +18,10 @@ const Navbar = () => {
         setIsMenuOpen(false);
     };
 
-    // Cerrar menú al cambiar de ruta
     useEffect(() => {
         closeMenu();
     }, [location.pathname]);
 
-    // Cerrar menú al presionar Escape
     useEffect(() => {
         const handleEscape = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
@@ -53,7 +51,6 @@ const Navbar = () => {
                     </Link>
                 </div>
                 
-                {/* Botón hamburguesa para móviles */}
                 <button 
                     className={styles.hamburgerButton}
                     onClick={toggleMenu}
@@ -65,12 +62,10 @@ const Navbar = () => {
                     <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
                 </button>
                 
-                {/* Overlay para cerrar menú */}
                 {isMenuOpen && (
                     <div className={styles.overlay} onClick={closeMenu}></div>
                 )}
                 
-                {/* Menú de navegación */}
                 <div className={`${styles.navbarButtons} ${isMenuOpen ? styles.menuOpen : ''}`}>
                     <Link 
                         to="/projects" 
