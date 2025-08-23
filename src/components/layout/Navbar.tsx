@@ -72,14 +72,14 @@ const Navbar = () => {
                         className={`${styles.navButton} ${isActive('/projects') ? styles.active : ''}`}
                         onClick={closeMenu}
                     >
-                        Proyectos
+                        Projects
                     </Link>
                     <Link 
                         to="/contact" 
                         className={`${styles.navButton} ${isActive('/contact') ? styles.active : ''}`}
                         onClick={closeMenu}
                     >
-                        Contacto
+                        Contact
                     </Link>
                 </div>
             </div>
