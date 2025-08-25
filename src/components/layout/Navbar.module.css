@@ -41,7 +41,7 @@
     color: #ffffff;
 }
 
-/* Botón hamburguesa */
+/* Hamburger button */
 .hamburgerButton {
     display: none;
     flex-direction: column;
@@ -76,7 +76,7 @@
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Overlay para cerrar menú */
+/* Overlay to close menu */
 .overlay {
     position: fixed;
     top: 0;
@@ -140,7 +140,7 @@
     width: 100%;
 }
 
-/* Responsive breakpoints matching MainFrame */
+/* Responsive breakpoints matching MainFrame.css */
 @media (max-width: 1200px) {
     .navbarContainer {
         max-width: 95%;
@@ -154,12 +154,12 @@
         padding: 1rem 0.5rem;
     }
     
-    /* Mostrar botón hamburguesa en móviles */
+    /* Show hamburger button on mobile */
     .hamburgerButton {
         display: flex;
     }
     
-    /* Ocultar menú normal en móviles */
+    /* Hide normal menu on mobile */
     .navbarButtons {
         position: fixed;
         top: 0;
