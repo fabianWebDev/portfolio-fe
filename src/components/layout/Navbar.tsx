@@ -43,8 +43,7 @@ const Navbar = () => {
     }, [isMenuOpen]);
 
     return (
-        <nav>
-            <div className={styles.navbarContainer}>
+        <nav className={styles.navbarContainer}>
                 <div className={styles.navbarLogo}>
                     <Link to="/" className={styles.logoLink} onClick={closeMenu}>
                         <img src="/src/assets/wizard.png" alt="Logo" /> 
@@ -82,7 +81,6 @@ const Navbar = () => {
                         Contact
                     </Link>
                 </div>
-            </div>
         </nav>
     );
 };
