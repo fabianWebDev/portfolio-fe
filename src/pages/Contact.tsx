@@ -15,7 +15,7 @@ const Contact = () => {
             <SecondaryFrame>
                 <Title variant="secondary" text="Contact" titleLogo={logo} />
                 <ContactForm />
-                <Button onClick={() => navigate("/")} variant="secondary">Go back to home</Button>
+                <Button onClick={() => navigate("/")} variant="tertiary">Go back to home</Button>
             </SecondaryFrame>
             
         </MainFrame>
