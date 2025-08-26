@@ -5,6 +5,8 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 /* Desktop styles (default behavior) */
@@ -24,16 +26,40 @@
         bottom: 0;
         left: 0;
         right: 0;
-        width: 100%;
+        width: 100vw;
+        max-width: 100vw;
         min-height: 70px;
         padding: 1rem 2rem;
-        background: rgba(26, 26, 46, 0.85);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.3);
+        background: rgba(60, 60, 104, 0.13);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         z-index: 1000;
         box-sizing: border-box;
+        /* Ensure backdrop-filter works */
+        isolation: isolate;
+        /* Fix positioning issues */
+        margin: 0;
+        border: none;
+        /* Prevent horizontal scroll */
+        overflow-x: hidden;
+        overflow-y: visible;
+        /* Fix viewport positioning */
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    
+    /* Fallback for browsers that don't support backdrop-filter */
+    .socialIconsFrame::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(26, 26, 46, 0.5);
+        z-index: -1;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 }
 
