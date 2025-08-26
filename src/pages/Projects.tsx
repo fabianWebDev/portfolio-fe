@@ -4,6 +4,9 @@ import ProjectsList from "../components/projects/ProjectsList";
 import Title from "../components/Title";
 import logo from "../assets/magic-wand-pixel.png";
 import Navbar from "../components/layout/Navbar";
+import SocialIconsFrame from "../components/layout/SocialIconsFrame";
+import SocialIcon from "../components/SocialIcon";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Projects = () => {
     return (
@@ -13,6 +16,17 @@ const Projects = () => {
                 <Title variant="secondary" text="Projects" titleLogo={logo} />
                 <ProjectsList />
             </SecondaryFrame>
+            <SocialIconsFrame>
+                <SocialIcon link="https://www.github.com">
+                    <FaGithub />
+                </SocialIcon>
+                <SocialIcon link="https://www.linkedin.com">
+                    <FaLinkedin />
+                </SocialIcon>
+                <SocialIcon link="https://www.instagram.com">
+                    <FaInstagram />
+                </SocialIcon>
+            </SocialIconsFrame>
         </MainFrame>
     );
 };

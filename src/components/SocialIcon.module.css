@@ -12,3 +12,15 @@
     color: #ffd700;
     transition: color 0.2s ease-in-out;
 }
+
+img, svg {
+    vertical-align: 0;
+}
+
+/* Specific styling for GitHub icon */
+.socialIcon svg {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: block;
+    margin: 0 auto;
+}

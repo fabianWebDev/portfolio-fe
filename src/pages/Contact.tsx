@@ -6,6 +6,9 @@ import SecondaryFrame from "../components/layout/SecondaryFrame";
 import Title from "../components/Title";
 import logo from "../assets/magic-ball-pixel.png";
 import Navbar from "../components/layout/Navbar";
+import SocialIcon from "../components/SocialIcon";
+import SocialIconsFrame from "../components/layout/SocialIconsFrame";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -17,7 +20,18 @@ const Contact = () => {
                 <ContactForm />
                 <Button onClick={() => navigate("/")} variant="tertiary">Go back to home</Button>
             </SecondaryFrame>
-            
+            <SocialIconsFrame>
+                <SocialIcon link="https://www.github.com">
+                    <FaGithub />
+                </SocialIcon>
+                <SocialIcon link="https://www.linkedin.com">
+                    <FaLinkedin />
+                </SocialIcon>
+                <SocialIcon link="https://www.instagram.com">
+                    <FaInstagram />
+                </SocialIcon>
+            </SocialIconsFrame>
+
         </MainFrame>
     )
 }
