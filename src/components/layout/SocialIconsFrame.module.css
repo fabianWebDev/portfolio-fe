@@ -1,6 +1,55 @@
+/* Base styles for all screen sizes */
 .socialIconsFrame {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    padding: 1rem;
+}
+
+/* Desktop styles (default behavior) */
+@media (min-width: 769px) {
+    .socialIconsFrame {
+        position: relative;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+}
+
+/* Mobile styles - sticky bar with blur background */
+@media (max-width: 768px) {
+    .socialIconsFrame {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 70px;
+        padding: 1rem 2rem;
+        background: rgba(26, 26, 46, 0.85);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    .socialIconsFrame {
+        min-height: 60px;
+        padding: 0.75rem 1.5rem;
+        gap: 0.75rem;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+    .socialIconsFrame {
+        padding: 0.5rem 1rem;
+        gap: 0.5rem;
+    }
 }
