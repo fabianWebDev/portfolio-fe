@@ -1,6 +1,6 @@
 .mainFrame {
     max-width: 1200px;
-    width: 100%;
+    width: 1200px;
     margin: 0 auto;
     padding: 1rem;
     box-sizing: border-box;
@@ -9,6 +9,7 @@
 /* Responsive breakpoints */
 @media (max-width: 1200px) {
     .mainFrame {
+        width: 95%;
         max-width: 95%;
         padding: 1rem 0.75rem;
     }
@@ -16,6 +17,7 @@
 
 @media (max-width: 768px) {
     .mainFrame {
+        width: 100%;
         max-width: 100%;
         padding: 1rem 0.5rem;
     }
