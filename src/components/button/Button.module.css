@@ -109,7 +109,7 @@
     }
 
     .tertiary {
-        padding: var(--spacing-sm);
+        padding: 0.5rem 0.25rem;
     }
 }
 
@@ -120,6 +120,6 @@
     }
 
     .tertiary {
-        padding: var(--spacing-md);
+        padding: 0.5rem 0.25rem;
     }
 }
