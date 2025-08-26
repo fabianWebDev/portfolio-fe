@@ -3,45 +3,63 @@
     flex-direction: column;
     width: 100%;
     height: 300px;
-    border-radius: 2px;
+    border-radius: 4px;
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.027), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+}
+
+.projectCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .cardTitle {
     color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 700;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .contentOverlay {
-    padding: 16px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    transition: background 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0.1) 0%, 
+        rgba(0, 0, 0, 0.3) 50%, 
+        rgba(0, 0, 0, 0.8) 100%); */
 }
 
 .cardDescriptionContainer {
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1rem;
+    gap: 1.2rem;
     margin-top: auto;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Hover effects */
 .projectCard:hover .contentOverlay {
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0.2) 0%, 
+        rgba(0, 0, 0, 0.5) 50%, 
+        rgba(0, 0, 0, 0.9) 100%);
 }
 
 .projectCard:hover .cardTitle,
@@ -55,40 +73,150 @@
     font-size: 1rem;
     font-weight: 400;
     text-align: start;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
 }
 
 .technologiesContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
 }
 
 .techTag {
     color: #ffffff;
     text-decoration: none;
-    padding: 4px 8px;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    letter-spacing: 0.3px;
+}
+
+.techTag:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .links {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
 }
 
 .link {
     color: #ffffff;
     text-decoration: none;
-    padding: 4px 8px;
+    padding: 8px 16px;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
     font-size: 0.9rem;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.link:hover::before {
+    left: 100%;
 }
 
 .link:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile styles - show info by default */
+@media (max-width: 768px) {
+    .projectCard {
+        height: auto;
+        min-height: 250px;
+        border-radius: 6px;
+    }
+    
+    .contentOverlay {
+        background: linear-gradient(180deg, 
+            rgba(0, 0, 0, 0.2) 0%, 
+            rgba(0, 0, 0, 0.5) 50%, 
+            rgba(0, 0, 0, 0.85) 100%);
+        position: relative;
+        padding: 18px;
+    }
+    
+    .cardTitle,
+    .cardDescriptionContainer {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .cardTitle {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cardDescription {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .techTag {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+        border-radius: 18px;
+    }
+    
+    .link {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projectCard {
+        min-height: 220px;
+        border-radius: 8px;
+    }
+    
+    .contentOverlay {
+        padding: 16px;
+    }
+    
+    .cardTitle {
+        font-size: 1.5rem;
+    }
+    
+    .cardDescription {
+        font-size: 0.85rem;
+    }
+    
+    .techTag {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .link {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
 }
