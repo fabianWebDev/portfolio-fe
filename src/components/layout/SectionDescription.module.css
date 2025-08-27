@@ -1,0 +1,28 @@
+.sectionDescription {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.sectionDescriptionContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionDescriptionContent p {
+    font-size: 1rem;
+    margin: 0;
+    width: 50%;
+}
+
+.sectionDescriptionContent a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .sectionDescriptionContent p {
+        font-size: 1rem;
+        width: 100%;
+    }
+}

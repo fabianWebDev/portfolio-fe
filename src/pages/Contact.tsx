@@ -9,6 +9,7 @@ import Navbar from "../components/layout/Navbar";
 import SocialIcon from "../components/SocialIcon";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import SectionDescription from "../components/layout/SectionDescription";
 
 const Contact = () => {
     const navigate = useNavigate();
@@ -17,6 +18,11 @@ const Contact = () => {
             <Navbar />
             <SecondaryFrame>
                 <Title variant="secondary" text="Contact" titleLogo={logo} />
+                <SectionDescription>
+                    <p>
+                        If you have any questions or want to work together, feel free to contact me or just shoot me an email at <a href="mailto:wizardofcode@gmail.com">wizardofcode@gmail.com</a>.
+                    </p>
+                </SectionDescription>
                 <ContactForm />
                 <Button onClick={() => navigate("/")} variant="tertiary">Go back to home</Button>
             </SecondaryFrame>
