@@ -220,9 +220,94 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .title {
+        font-size: 3.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .logo {
         width: 50px;
         height: 50px;
+    }
+    
+    .titleContainer {
+        flex-direction: row;
+        gap: 0.8rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .title {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+    
+    .secondaryTitle {
+        font-size: 2.2rem;
+    }
+    
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .secondaryLogo {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleContainer {
+        gap: 0.6rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    
+    .secondaryTitle {
+        font-size: 1.9rem;
+    }
+    
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .secondaryLogo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .spark {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 2.2rem;
+        
+    }
+    
+    .secondaryTitle {
+        font-size: 1.6rem;
+    }
+    
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .secondaryLogo {
+        width: 35px;
+        height: 35px;
     }
 }
