@@ -9,6 +9,18 @@
     font-family: 'Poppins', sans-serif;
     text-align: start;
     margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards 0.5s;
+}
+
+/* Primer párrafo aparece antes del glow del título */
+.description:first-child {
+    animation: fadeInUp 1.5s ease forwards 0.3s;
+}
+
+/* Segundo párrafo aparece sincronizado con el glow del título */
+.description:last-child {
+    animation: fadeInUp 1.5s ease forwards 1.5s;
 }
 
 .highlight {
@@ -22,10 +34,33 @@
     font-size: 1.5rem;
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 768px) {
+    .descriptionContainer {
+        margin-bottom: 1rem;
+    }
+    
     .description {
         margin-bottom: 1rem;
         font-size: 1.4rem;
+    }
+    
+    .description:first-child {
+        animation: fadeInUp 1.5s ease forwards 0.3s;
+    }
+    
+    .description:last-child {
+        animation: fadeInUp 1.5s ease forwards 1.5s;
     }
 }
 
