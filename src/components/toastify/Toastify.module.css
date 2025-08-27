@@ -1,0 +1,193 @@
+/* Estilos personalizados para las notificaciones toast - Adaptados al diseño de la app */
+
+/* Personalización del contenedor principal */
+:global(.Toastify__toast-container) {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  z-index: var(--z-tooltip);
+  margin-top: 0.5rem;
+}
+
+/* Personalización de las notificaciones individuales - TODAS con la misma gradiente base */
+:global(.Toastify__toast) {
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-height: 64px;
+  padding: var(--spacing-md);
+  backdrop-filter: blur(10px);
+  /* Usar la misma gradiente del App.css para todos los toast */
+  background: linear-gradient(144deg, rgba(74, 18, 74, 0.95) 0%, rgba(84, 116, 168, 0.95) 60%, rgba(52, 146, 153, 0.95) 100%);
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de borde brillante para todas las notificaciones - mismo color */
+:global(.Toastify__toast)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  /* Usar la misma gradiente pero más brillante */
+  background: linear-gradient(90deg, 
+    rgba(74, 18, 74, 1) 0%, 
+    rgba(84, 116, 168, 1) 50%, 
+    rgba(52, 146, 153, 1) 100%
+  );
+  opacity: 0.9;
+}
+
+/* TODOS los tipos de toast usan el mismo fondo - solo se diferencian por el icono */
+:global(.Toastify__toast--success),
+:global(.Toastify__toast--error),
+:global(.Toastify__toast--warning),
+:global(.Toastify__toast--info) {
+  /* Mantener el mismo fondo para todos */
+  background: linear-gradient(144deg, rgba(74, 18, 74, 0.95) 0%, rgba(84, 116, 168, 0.95) 60%, rgba(52, 146, 153, 0.95) 100%);
+}
+
+/* Personalización del botón de cerrar */
+:global(.Toastify__close-button) {
+  color: var(--text-secondary);
+  opacity: 0.7;
+  transition: all var(--transition-fast);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+:global(.Toastify__close-button:hover) {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* Personalización de la barra de progreso - usar la gradiente base */
+:global(.Toastify__progress-bar) {
+  background: linear-gradient(90deg, 
+    rgba(74, 18, 74, 0.8) 0%, 
+    rgba(84, 116, 168, 0.8) 50%, 
+    rgba(52, 146, 153, 0.8) 100%
+  );
+  height: 3px;
+  border-radius: 0;
+}
+
+/* Personalización del icono - mantener el color original para diferenciar tipos */
+:global(.Toastify__toast-icon) {
+  margin-right: var(--spacing-sm);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Los iconos mantienen sus colores originales para diferenciar tipos */
+:global(.Toastify__toast--success .Toastify__toast-icon) {
+  color: #10b981; /* Verde para éxito */
+}
+
+:global(.Toastify__toast--error .Toastify__toast-icon) {
+  color: #ef4444; /* Rojo para error */
+}
+
+:global(.Toastify__toast--warning .Toastify__toast-icon) {
+  color: #f59e0b; /* Naranja para advertencia */
+}
+
+:global(.Toastify__toast--info .Toastify__toast-icon) {
+  color: #3b82f6; /* Azul para info */
+}
+
+/* Animaciones personalizadas - más suaves y acordes al estilo */
+:global(.Toastify__toast--enter) {
+  transform: translateX(100%) scale(0.8);
+  opacity: 0;
+}
+
+:global(.Toastify__toast--enter-active) {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  transition: all var(--transition-normal) cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+:global(.Toastify__toast--exit) {
+  transform: translateX(100%) scale(1);
+  opacity: 1;
+}
+
+:global(.Toastify__toast--exit-active) {
+  transform: translateX(100%) scale(0.8);
+  opacity: 0;
+  transition: all var(--transition-normal) cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Efecto hover en las notificaciones */
+:global(.Toastify__toast:hover) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg), 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-normal);
+}
+
+/* Responsive design - adaptado al estilo de la app */
+@media (max-width: 768px) {
+  :global(.Toastify__toast-container) {
+    width: 100%;
+    padding: 0 var(--spacing-md);
+  }
+  
+  :global(.Toastify__toast) {
+    margin-bottom: var(--spacing-sm);
+    min-height: 56px;
+    padding: var(--spacing-sm);
+    font-size: 0.8rem;
+  }
+  
+  :global(.Toastify__close-button) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Efecto de brillo sutil en el borde inferior */
+:global(.Toastify__toast)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent
+  );
+}
+
+/* Estilo especial para notificaciones que no se cierran automáticamente */
+:global(.Toastify__toast--auto-close-false) {
+  border-left: 4px solid var(--accent-color);
+}
+
+/* Efecto de pulso para notificaciones importantes */
+:global(.Toastify__toast--important) {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: var(--shadow-lg), 0 0 0 0 rgba(255, 215, 0, 0.7);
+  }
+  70% {
+    box-shadow: var(--shadow-lg), 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+  100% {
+    box-shadow: var(--shadow-lg), 0 0 0 0 rgba(255, 215, 0, 0);
+  }
+}
