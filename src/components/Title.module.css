@@ -19,7 +19,7 @@
     animation:
         appearNoColor 2s ease forwards,
         float 3s ease-in-out infinite 2s,
-        glowOn 1s ease forwards 2s;
+        glowOn 1s ease forwards 1.5s;
 }
 
 .secondaryTitle {
@@ -236,8 +236,9 @@
         flex-direction: row;
         gap: 0.8rem;
         margin-bottom: 0.5rem;
-        text-align: center;
+        text-align: left;
         align-items: center;
+        justify-content: flex-start;
     }
     
     .title {
@@ -264,6 +265,8 @@
     .titleContainer {
         gap: 0.6rem;
         margin-bottom: 0.3rem;
+        justify-content: flex-start;
+        text-align: left;
     }
     
     .title {
@@ -292,6 +295,11 @@
 }
 
 @media (max-width: 360px) {
+    .titleContainer {
+        justify-content: flex-start;
+        text-align: left;
+    }
+    
     .title {
         font-size: 2.2rem;
         
