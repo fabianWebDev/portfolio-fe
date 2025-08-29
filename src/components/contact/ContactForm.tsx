@@ -5,6 +5,7 @@ import Input from './Input';
 import TextArea from './TextArea';
 import Button from '../button/Button';
 import { showSuccess, showError } from '../toastify/Toastify';
+import { validateContactForm, hasValidationErrors, getFirstValidationError, type ValidationErrors } from './contactValidations';
 import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
@@ -14,36 +15,21 @@ const ContactForm = () => {
         email: '',
         message: ''
     });
-    const [validationErrors, setValidationErrors] = useState<Partial<ContactMessage>>({});
+    const [validationErrors, setValidationErrors] = useState<ValidationErrors>({});
 
     const validateForm = (): boolean => {
-        const errors: Partial<ContactMessage> = {};
-        
-        if (!formData.name.trim()) {
-            errors.name = 'El nombre es requerido';
-        }
-        
-        if (!formData.email.trim()) {
-            errors.email = 'El email es requerido';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-            errors.email = 'El email no es válido';
-        }
-        
-        if (!formData.message.trim()) {
-            errors.message = 'El mensaje es requerido';
-        }
-        
+        const errors = validateContactForm(formData);
         setValidationErrors(errors);
         
         // Show first validation error if any
-        if (Object.keys(errors).length > 0) {
-            const firstError = Object.values(errors).find(error => error);
+        if (hasValidationErrors(errors)) {
+            const firstError = getFirstValidationError(errors);
             if (firstError) {
                 showError(firstError);
             }
         }
         
-        return Object.keys(errors).length === 0;
+        return !hasValidationErrors(errors);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
