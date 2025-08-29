@@ -14,6 +14,37 @@ const ContactForm = () => {
         email: '',
         message: ''
     });
+    const [validationErrors, setValidationErrors] = useState<Partial<ContactMessage>>({});
+
+    const validateForm = (): boolean => {
+        const errors: Partial<ContactMessage> = {};
+        
+        if (!formData.name.trim()) {
+            errors.name = 'El nombre es requerido';
+        }
+        
+        if (!formData.email.trim()) {
+            errors.email = 'El email es requerido';
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            errors.email = 'El email no es válido';
+        }
+        
+        if (!formData.message.trim()) {
+            errors.message = 'El mensaje es requerido';
+        }
+        
+        setValidationErrors(errors);
+        
+        // Show first validation error if any
+        if (Object.keys(errors).length > 0) {
+            const firstError = Object.values(errors).find(error => error);
+            if (firstError) {
+                showError(firstError);
+            }
+        }
+        
+        return Object.keys(errors).length === 0;
+    };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -21,13 +52,26 @@ const ContactForm = () => {
             ...prev,
             [name]: value
         }));
+        
+        // Clear validation error when user starts typing
+        if (validationErrors[name as keyof ContactMessage]) {
+            setValidationErrors(prev => ({
+                ...prev,
+                [name]: undefined
+            }));
+        }
     };
 
     const handleSubmit = async () => {
+        // Validate form first
+        if (!validateForm()) {
+            return;
+        }
+        
         try {
             await sendMessage(formData);
         } catch (err) {
-            console.error('❌ Error:', err);
+            console.log('❌ Error in handleSubmit:', err);
         }
     };
 
@@ -57,6 +101,8 @@ const ContactForm = () => {
 
 
 
+
+
     return (
         <form className={styles.contactForm + " col-xl-4"} onSubmit={handleFormSubmit}>
             <Input
@@ -65,7 +111,7 @@ const ContactForm = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
-                required
+                required={false}
             />
             <Input
                 type="email"
@@ -73,14 +119,14 @@ const ContactForm = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
-                required
+                required={false}
             />
             <TextArea
                 name="message"
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
-                required
+                required={false}
                 rows={5}
             />
             <Button onClick={() => {}} variant="primary">
