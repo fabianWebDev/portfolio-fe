@@ -68,7 +68,7 @@ const ContactForm = () => {
 
     useEffect(() => {
         if (success) {
-            showSuccess('¡Mensaje enviado correctamente!');
+            showSuccess('¡Message sent successfully!');
             setFormData({
                 name: '',
                 email: '',
