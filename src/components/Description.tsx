@@ -14,7 +14,7 @@ const Description = () => {
                 and <span className={styles.highlight}>best development practices</span>.
             </p>
             <p className={styles.description}>
-                <span className={styles.highlightBig}>Wizard of Code</span> isn't just a catchy name —
+                <span className={styles.highlightBig}>WizardOfCode</span> isn't just a catchy name —
                 it's my work philosophy: <span className={styles.highlight}>solving problems efficiently, sustainably, and with purpose</span>.
                 I believe software is a tool to <span className={styles.highlight}>improve lives</span>,
                 <span className={styles.highlight}>streamline processes</span>, and

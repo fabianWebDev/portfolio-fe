@@ -8,7 +8,7 @@ interface TitleProps {
     titleLogo?: any;
 }
 
-const Title = ({ variant = 'primary', text = 'Wizard of Code', showLogo = true, titleLogo = logo }: TitleProps) => {
+const Title = ({ variant = 'primary', text = 'WizardOfCode', showLogo = true, titleLogo = logo }: TitleProps) => {
     const titleClass = variant === 'primary' 
         ? `${styles.title} ${styles.magicTitle}` 
         : `${styles.title} ${styles.secondaryTitle}`;
