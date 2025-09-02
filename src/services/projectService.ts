@@ -18,7 +18,7 @@ class ProjectService {
     async getProjects(): Promise<Project[]> {
         try {
             const response = await apiService.get<Project[]>('/projects');
-            return response;
+            return response.data;
         } catch (error) {
             console.error('Error al obtener proyectos:', error);
             throw error;
