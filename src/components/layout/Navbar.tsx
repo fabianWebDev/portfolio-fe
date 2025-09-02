@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
+import wizardLogo from '../../assets/wizard.png';
 
 const Navbar = () => {
     const location = useLocation();
@@ -46,7 +47,7 @@ const Navbar = () => {
         <nav className={styles.navbarContainer}>
                 <div className={styles.navbarLogo}>
                     <Link to="/" className={styles.logoLink} onClick={closeMenu}>
-                        <img src="/src/assets/wizard.png" alt="Logo" /> 
+                        <img src={wizardLogo} alt="Logo" /> 
                     </Link>
                 </div>
                 

@@ -18,7 +18,12 @@ class ProjectService {
     async getProjects(): Promise<Project[]> {
         try {
             const response = await apiService.get<Project[]>('/projects');
-            return response.data;
+            // Si la respuesta es directamente un array, lo devolvemos
+            if (Array.isArray(response)) {
+                return response;
+            }
+            // Si tiene estructura ApiResponse, devolvemos response.data
+            return response.data || [];
         } catch (error) {
             console.error('Error al obtener proyectos:', error);
             throw error;
