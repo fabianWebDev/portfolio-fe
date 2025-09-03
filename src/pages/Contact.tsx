@@ -27,15 +27,15 @@ const Contact = () => {
                 <Button onClick={() => navigate("/")} variant="tertiary">Go back to home</Button>
             </SecondaryFrame>
             <SocialIconsFrame>
-                <SocialIcon link="https://www.github.com">
+                <SocialIcon link="https://github.com/fabianWebDev">
                     <FaGithub />
                 </SocialIcon>
-                <SocialIcon link="https://www.linkedin.com">
+                <SocialIcon link="https://www.linkedin.com/in/fabi%C3%A1n-campos-b992a1196/">
                     <FaLinkedin />
                 </SocialIcon>
-                <SocialIcon link="https://www.instagram.com">
+                {/* <SocialIcon link="https://www.instagram.com">
                     <FaInstagram />
-                </SocialIcon>
+                </SocialIcon> */}
             </SocialIconsFrame>
 
         </MainFrame>
