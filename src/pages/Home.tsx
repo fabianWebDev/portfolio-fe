@@ -4,7 +4,7 @@ import MainFrame from "../components/layout/MainFrame";
 import SocialIcon from "../components/SocialIcon";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
-import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Navbar from "../components/layout/Navbar";
 
 const Home = () => {
@@ -22,9 +22,6 @@ const Home = () => {
                 <SocialIcon link="https://www.linkedin.com/in/fabi%C3%A1n-campos-b992a1196/">
                     <FaLinkedin />
                 </SocialIcon>
-                {/* <SocialIcon link="https://www.instagram.com">
-                    <FaInstagram />
-                </SocialIcon> */}
             </SocialIconsFrame>
         </MainFrame>
     )
