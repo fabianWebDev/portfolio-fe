@@ -9,7 +9,7 @@
 }
 
 .socialIcon:hover {
-    color: var(--accent-color);
+    color: var(--accent-glow);
     transition: color 0.2s ease-in-out;
 }
 

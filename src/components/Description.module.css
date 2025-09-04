@@ -29,9 +29,10 @@
 }
 
 .highlightBig {
-    color: var(--accent-color);
+    color: #ffffff;
     font-weight: 700;
     font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--accent-glow);
 }
 
 @keyframes fadeInUp {
@@ -39,6 +40,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -48,29 +50,24 @@
 @media (max-width: 768px) {
     .descriptionContainer {
         margin-bottom: 1rem;
-        text-align: center;
     }
-    
+
     .description {
         margin-bottom: 1rem;
         font-size: 1.4rem;
     }
-    
+
     .description:first-child {
         animation: fadeInUp 1.5s ease forwards 0.3s;
     }
-    
+
     .description:last-child {
         animation: fadeInUp 1.5s ease forwards 1.5s;
     }
 }
 
 @media (max-width: 480px) {
-    .descriptionContainer {
-        text-align: center;
-        }
     .description {
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1rem;
     }
 }

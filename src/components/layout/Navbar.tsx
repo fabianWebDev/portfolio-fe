@@ -45,43 +45,50 @@ const Navbar = () => {
 
     return (
         <nav className={styles.navbarContainer}>
-                <div className={styles.navbarLogo}>
-                    <Link to="/" className={styles.logoLink} onClick={closeMenu}>
-                        <img src={wizardLogo} alt="Logo" /> 
-                    </Link>
-                </div>
-                
-                <button 
-                    className={styles.hamburgerButton}
-                    onClick={toggleMenu}
-                    aria-label="Toggle menu"
-                    aria-expanded={isMenuOpen}
+            <div className={styles.navbarLogo}>
+                <Link to="/" className={styles.logoLink} onClick={closeMenu}>
+                    <img src={wizardLogo} alt="Logo" />
+                </Link>
+            </div>
+
+            <button
+                className={styles.hamburgerButton}
+                onClick={toggleMenu}
+                aria-label="Toggle menu"
+                aria-expanded={isMenuOpen}
+            >
+                <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
+                <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
+                <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
+            </button>
+
+            {isMenuOpen && (
+                <div className={styles.overlay} onClick={closeMenu}></div>
+            )}
+
+            <div className={`${styles.navbarButtons} ${isMenuOpen ? styles.menuOpen : ''}`}>
+                <Link
+                    to="/"
+                    className={`${styles.navButton} ${isActive('/') ? styles.active : ''}`}
+                    onClick={closeMenu}
                 >
-                    <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
-                    <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
-                    <span className={`${styles.hamburgerLine} ${isMenuOpen ? styles.open : ''}`}></span>
-                </button>
-                
-                {isMenuOpen && (
-                    <div className={styles.overlay} onClick={closeMenu}></div>
-                )}
-                
-                <div className={`${styles.navbarButtons} ${isMenuOpen ? styles.menuOpen : ''}`}>
-                    <Link 
-                        to="/projects" 
-                        className={`${styles.navButton} ${isActive('/projects') ? styles.active : ''}`}
-                        onClick={closeMenu}
-                    >
-                        Projects
-                    </Link>
-                    <Link 
-                        to="/contact" 
-                        className={`${styles.navButton} ${isActive('/contact') ? styles.active : ''}`}
-                        onClick={closeMenu}
-                    >
-                        Contact
-                    </Link>
-                </div>
+                    Home
+                </Link>
+                <Link
+                    to="/projects"
+                    className={`${styles.navButton} ${isActive('/projects') ? styles.active : ''}`}
+                    onClick={closeMenu}
+                >
+                    Projects
+                </Link>
+                <Link
+                    to="/contact"
+                    className={`${styles.navButton} ${isActive('/contact') ? styles.active : ''}`}
+                    onClick={closeMenu}
+                >
+                    Contact
+                </Link>
+            </div>
         </nav>
     );
 };

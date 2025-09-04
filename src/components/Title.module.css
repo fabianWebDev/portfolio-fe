@@ -7,7 +7,7 @@
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 700;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -46,10 +46,10 @@
 
     to {
         text-shadow:
-            0 0 10px #ffd700,
-            0 0 20px #ffd700,
-            0 0 30px #ffd700,
-            0 0 40px #ffd700;
+            0 0 10px var(--accent-glow),
+            0 0 20px var(--accent-glow),
+            0 0 30px var(--accent-glow),
+            0 0 40px var(--accent-glow);
     }
 }
 
@@ -66,8 +66,8 @@
 }
 
 .logo {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
 }
 
 .logoContainer {
@@ -84,10 +84,10 @@
 .spark {
     position: absolute;
     font-size: 1.2rem;
-    color: #ffd700;
+    color: #ffffff;
     opacity: 0;
     pointer-events: none;
-    text-shadow: 0 0 5px #ffd700;
+    text-shadow: 0 0 5px var(--accent-glow);
     z-index: 10;
     transform: translate(0, 0) scale(0.5);
 }
@@ -270,7 +270,7 @@
     }
     
     .title {
-        font-size: 2.5rem;
+        font-size: 3rem;
         line-height: 1.1;
         margin-bottom: 0rem;
         text-align: center;
@@ -279,11 +279,6 @@
     .secondaryTitle {
         font-size: 1.9rem;
         margin-bottom: 0;
-        text-decoration: underline;
-        text-decoration-color: #ffd700;
-        text-decoration-thickness:4px;
-        text-underline-offset: 4px;
-        text-decoration-style: solid;
     }
     
     .logo {
@@ -307,7 +302,7 @@
     }
     
     .title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         
     }
     

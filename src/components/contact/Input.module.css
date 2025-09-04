@@ -18,6 +18,7 @@
 .input::placeholder {
     color: #cccccc77;
     transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
 }
 
 .input:focus {
