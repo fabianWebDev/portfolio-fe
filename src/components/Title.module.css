@@ -272,17 +272,22 @@
     .title {
         font-size: 2.5rem;
         line-height: 1.1;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
+        text-align: center;
     }
     
     .secondaryTitle {
         font-size: 1.9rem;
         margin-bottom: 0;
+        text-decoration: underline;
+        text-decoration-color: #ffd700;
+        text-decoration-thickness:4px;
+        text-underline-offset: 4px;
+        text-decoration-style: solid;
     }
     
     .logo {
-        width: 45px;
-        height: 45px;
+        display: none;
     }
     
     .secondaryLogo {

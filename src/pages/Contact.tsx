@@ -20,7 +20,7 @@ const Contact = () => {
                 <Title variant="secondary" text="Contact" titleLogo={logo} />
                 <SectionDescription>
                     <p>
-                        If you have any questions or want to work together, feel free to contact me or just shoot me an email at <a href="mailto:wizardofcode@gmail.com">wizardofcode@gmail.com</a>.
+                        If you have any questions or want to work together, feel free to contact me or just shoot me an email at <a href="mailto:fabiancava22@gmail.com">fabiancava22@gmail.com</a>.
                     </p>
                 </SectionDescription>
                 <ContactForm />
