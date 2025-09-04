@@ -1,11 +1,11 @@
 .socialIconContainer {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .socialIcon {
     color: #ffffff;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .socialIcon:hover {
@@ -19,8 +19,8 @@ img, svg {
 
 /* Specific styling for GitHub icon */
 .socialIcon svg {
-    width: 1.75rem;
-    height: 1.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
     display: block;
     margin: 0 auto;
 }

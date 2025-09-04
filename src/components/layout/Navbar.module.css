@@ -60,7 +60,7 @@
     width: 100%;
     height: 3px;
     background-color: #ffffff;
-    border-radius: var(--border-radius-sm);
+    border-radius: 0;
     transition: all var(--transition-normal);
     box-shadow: 0 0 5px var(--accent-glow);
     transform-origin: center;
@@ -107,7 +107,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: all var(--transition-normal);
-    border-radius: var(--border-radius-md);
+    border-radius: 0;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -125,6 +125,37 @@
     background-color: var(--accent-glow);
     transition: width var(--transition-slow);
     z-index: 1;
+    .navButton {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: #ffffff;
+    text-shadow: 0 0 5px var(--accent-glow);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border-radius: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.navButton::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-glow);
+    transition: width var(--transition-slow);
+    z-index: 1;
+    border-radius: 0;
+}
+
 }
 
 .navButton:hover::before {
@@ -192,7 +223,7 @@
         width: 80%;
         justify-content: center;
         border: 1px solid transparent;
-        border-radius: var(--border-radius-lg);
+        border-radius: 0;
     }
 }
 

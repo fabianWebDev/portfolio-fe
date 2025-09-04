@@ -1,7 +1,3 @@
-.descriptionContainer {
-    margin-bottom: 1rem;
-}
-
 .description {
     font-size: 1rem;
     font-weight: 400;
@@ -49,7 +45,7 @@
 
 @media (max-width: 768px) {
     .descriptionContainer {
-        margin-bottom: 1rem;
+        padding: 1rem 0;
     }
 
     .description {
@@ -67,6 +63,10 @@
 }
 
 @media (max-width: 480px) {
+    .descriptionContainer {
+        padding: 1rem 0;
+    }
+
     .description {
         font-size: 1rem;
     }
