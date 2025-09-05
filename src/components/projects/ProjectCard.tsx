@@ -32,8 +32,9 @@ const ProjectCard = ({
             }}
         >
             <div className={styles.contentOverlay}>
-                <h3 className={styles.cardTitle}>{title}</h3>
+
                 <div className={styles.cardDescriptionContainer}>
+                    <h3 className={styles.cardTitle}>{title}</h3>
                     <p className={styles.cardDescription}>{description}</p>
 
                     {technologies.length > 0 && (

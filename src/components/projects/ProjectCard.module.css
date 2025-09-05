@@ -27,7 +27,6 @@
     transform: translateY(20px);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 0.5px;
 }
 
 .contentOverlay {
@@ -43,7 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    gap: 1.2rem;
+    gap: 0.5rem;
     margin-top: auto;
     opacity: 0;
     transform: translateY(20px);
@@ -86,9 +85,8 @@
     text-decoration: none;
     padding: 6px 12px;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
-    font-size: 0.85rem;
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 12px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     letter-spacing: 0.3px;
@@ -97,7 +95,6 @@
 .techTag:hover {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.25));
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
 }
 
 .links {
@@ -109,11 +106,11 @@
 .link {
     color: #ffffff;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 4px 8px;
     border-radius: 4px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    background: var(--primary-color);
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 300;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     backdrop-filter: blur(10px);
     letter-spacing: 0.3px;
@@ -121,26 +118,10 @@
     overflow: hidden;
 }
 
-.link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.link:hover::before {
-    left: 100%;
-}
 
 .link:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    background: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
-    border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Mobile styles - show info by default */
@@ -152,10 +133,6 @@
     }
     
     .contentOverlay {
-        /* background: linear-gradient(180deg, 
-            rgba(0, 0, 0, 0.2) 0%, 
-            rgba(0, 0, 0, 0.5) 50%, 
-            rgba(0, 0, 0, 0.85) 100%); */
         position: relative;
         padding: 18px;
     }
@@ -167,8 +144,7 @@
     }
     
     .cardTitle {
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
+        font-size: 1rem;
     }
     
     .cardDescription {
@@ -184,7 +160,7 @@
     .link {
         font-size: 0.8rem;
         padding: 6px 12px;
-        border-radius: 20px;
+        border-radius: 4px;
     }
 }
 
@@ -199,20 +175,21 @@
     }
     
     .cardTitle {
-        font-size: 1.5rem;
+        font-size: 1rem;
+        font-weight: 700;
     }
     
     .cardDescription {
-        font-size: 0.85rem;
+        font-size: 14px;
     }
     
     .techTag {
         padding: 4px 8px;
-        font-size: 0.75rem;
+        font-size: 12px;
     }
     
     .link {
-        padding: 5px 10px;
-        font-size: 0.75rem;
+        padding: 4px 8px;
+        font-size: 14px;
     }
 }
