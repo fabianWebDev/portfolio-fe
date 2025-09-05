@@ -2,7 +2,6 @@ import MainFrame from "../components/layout/MainFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import ProjectsList from "../components/projects/ProjectsList";
 import Title from "../components/Title";
-import logo from "../assets/magic-wand-pixel.png";
 import Navbar from "../components/layout/Navbar";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
 import SocialIcon from "../components/SocialIcon";
@@ -13,7 +12,7 @@ const Projects = () => {
         <MainFrame>
             <Navbar />
             <SecondaryFrame>
-                <Title variant="secondary" text="Projects" titleLogo={logo} />
+                <Title variant="secondary" text="Projects" />
                 <ProjectsList />
             </SecondaryFrame>
             <SocialIconsFrame>

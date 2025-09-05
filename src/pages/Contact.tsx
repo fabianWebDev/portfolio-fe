@@ -4,7 +4,6 @@ import ContactForm from "../components/contact/ContactForm";
 import MainFrame from "../components/layout/MainFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import Title from "../components/Title";
-import logo from "../assets/magic-ball-pixel.png";
 import Navbar from "../components/layout/Navbar";
 import SocialIcon from "../components/SocialIcon";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
@@ -17,7 +16,7 @@ const Contact = () => {
         <MainFrame>
             <Navbar />
             <SecondaryFrame>
-                <Title variant="secondary" text="Contact" titleLogo={logo} />
+                <Title variant="secondary" text="Contact" />
                 <SectionDescription>
                     <p>
                         If you have any questions or want to work together, feel free to contact me or just shoot me an email at <a href="mailto:fabiancava22@gmail.com">fabiancava22@gmail.com</a>.
