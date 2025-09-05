@@ -8,7 +8,7 @@ import logo from "../assets/magic-ball-pixel.png";
 import Navbar from "../components/layout/Navbar";
 import SocialIcon from "../components/SocialIcon";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
-import { FaGithub, FaLinkedin} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import SectionDescription from "../components/layout/SectionDescription";
 
 const Contact = () => {
@@ -24,7 +24,7 @@ const Contact = () => {
                     </p>
                 </SectionDescription>
                 <ContactForm />
-                <Button onClick={() => navigate("/")} variant="tertiary">Go back to home</Button>
+                <Button onClick={() => navigate("/")} variant="tertiary">Go Back Home</Button>
             </SecondaryFrame>
             <SocialIconsFrame>
                 <SocialIcon link="https://github.com/fabianWebDev">
@@ -34,7 +34,6 @@ const Contact = () => {
                     <FaLinkedin />
                 </SocialIcon>
             </SocialIconsFrame>
-
         </MainFrame>
     )
 }

@@ -4,8 +4,8 @@ const Description = () => {
     return (
         <div className={styles.descriptionContainer}>
             <p className={styles.description}>
-                Hi, I'm <span className={styles.highlight}>Fabián Campos</span> — a software engineer with more than
-                <span className={styles.highlight}> 6 years</span> of experience building
+                Hi, I'm <span className={styles.highlight}>Fabián Campos</span> — a software engineer with 
+                <span className={styles.highlight}> 6+ years</span> of experience building
                 <span className={styles.highlight}> solid, intuitive, and results-driven</span> web solutions.
                 I specialize in <span className={styles.highlight}>backend development with Python and Django</span>,
                 as well as <span className={styles.highlight}>frontend development with React</span>.

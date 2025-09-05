@@ -1,4 +1,3 @@
-import logo from '../assets/wizard-pixel.png';
 import styles from './Title.module.css';
 
 interface TitleProps {
@@ -8,14 +7,10 @@ interface TitleProps {
     titleLogo?: any;
 }
 
-const Title = ({ variant = 'primary', text = 'WizardOfCode', showLogo = true, titleLogo = logo }: TitleProps) => {
-    const titleClass = variant === 'primary' 
-        ? `${styles.title} ${styles.magicTitle}` 
+const Title = ({ variant = 'primary', text = 'WizardOfCode' }: TitleProps) => {
+    const titleClass = variant === 'primary'
+        ? `${styles.title} ${styles.magicTitle}`
         : `${styles.title} ${styles.secondaryTitle}`;
-    
-    const logoClass = variant === 'primary' 
-        ? `${styles.logo} ${styles.magicLogo}` 
-        : `${styles.logo} ${styles.secondaryLogo}`;
 
     return (
         <div className={styles.titleContainer}>
