@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 :root {
   /* Color palette */
   --primary-color: #347a7d;
@@ -6,34 +9,34 @@
   --accent-glow: #40E0D0;
   --text-primary: #ffffff;
   --text-secondary: #e0e0e0;
-  
+
   /* Background colors */
   --bg-primary: #1a1a2e;
   --bg-secondary: #16213e;
   --bg-tertiary: #0f3460;
-  
+
   /* Spacing */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
-  
+
   /* Border radius */
   --border-radius-sm: 4px;
   --border-radius-md: 6px;
   --border-radius-lg: 8px;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.4s ease;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
-  
+
   /* Z-index scale */
   --z-dropdown: 1000;
   --z-sticky: 1020;
@@ -42,6 +45,8 @@
   --z-modal: 1050;
   --z-popover: 1060;
   --z-tooltip: 1070;
+
+  --font-family: 'Amatic SC', cursive;
 }
 
 * {
@@ -84,14 +89,17 @@ body {
 }
 
 /* Ensure all direct children respect viewport */
-#root > * {
+#root>* {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 /* Force viewport constraints only on mobile */
 @media (max-width: 768px) {
-  html, body, #root {
+
+  html,
+  body,
+  #root {
     min-width: 100vw;
     max-width: 100vw;
     overflow-x: hidden !important;
@@ -100,7 +108,10 @@ body {
 
 /* Desktop layout - preserve original spacing */
 @media (min-width: 769px) {
-  html, body, #root {
+
+  html,
+  body,
+  #root {
     overflow-x: hidden;
     width: 100%;
     max-width: none;

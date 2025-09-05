@@ -125,36 +125,37 @@
     background-color: var(--accent-glow);
     transition: width var(--transition-slow);
     z-index: 1;
-    .navButton {
-    padding: var(--spacing-sm) var(--spacing-md);
-    border: 1px solid transparent;
-    background-color: transparent;
-    color: #ffffff;
-    text-shadow: 0 0 5px var(--accent-glow);
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    border-radius: 0;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-}
 
-.navButton::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: var(--accent-glow);
-    transition: width var(--transition-slow);
-    z-index: 1;
-    border-radius: 0;
-}
+    .navButton {
+        padding: var(--spacing-sm) var(--spacing-md);
+        border: 1px solid transparent;
+        background-color: transparent;
+        color: #ffffff;
+        text-shadow: 0 0 5px var(--accent-glow);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        border-radius: 0;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .navButton::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--accent-glow);
+        transition: width var(--transition-slow);
+        z-index: 1;
+        border-radius: 0;
+    }
 
 }
 
@@ -202,7 +203,11 @@
         right: -100%;
         width: 250px;
         height: 100vh;
-        background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+        background: linear-gradient(
+            144deg,
+            #3a0f3a 0%,    /* púrpura oscuro */
+            #435d7f 100%   /* azul profundo casi grisáceo */
+          );
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
