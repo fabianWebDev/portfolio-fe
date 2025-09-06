@@ -23,6 +23,7 @@
     text-decoration: none;
     color: inherit;
     transition: all var(--transition-normal);
+    font-size: 1.5rem;
 }
 
 .logoLink:hover {

@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import wizardLogo from '../../assets/wizard.png';
+import wizardLogo from '../../assets/wizard2.png';
 
 const Navbar = () => {
     const location = useLocation();
