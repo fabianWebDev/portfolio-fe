@@ -1,7 +1,7 @@
-import Title from "../components/Title";
-import Description from "../components/Description";
+import Title from "../components/title/Title";
+import Description from "../components/description/Description";
 import MainFrame from "../components/layout/MainFrame";
-import SocialIcon from "../components/SocialIcon";
+import SocialIcon from "../components/social/SocialIcon";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
