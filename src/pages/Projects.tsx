@@ -1,10 +1,10 @@
 import MainFrame from "../components/layout/MainFrame";
 import SecondaryFrame from "../components/layout/SecondaryFrame";
 import ProjectsList from "../components/projects/ProjectsList";
-import Title from "../components/Title";
+import Title from "../components/title/Title";
 import Navbar from "../components/layout/Navbar";
 import SocialIconsFrame from "../components/layout/SocialIconsFrame";
-import SocialIcon from "../components/SocialIcon";
+import SocialIcon from "../components/social/SocialIcon";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Projects = () => {
