@@ -18,7 +18,6 @@ export const useProjects = (): UseProjectsReturn => {
         try {
             setLoading(true);
             setError(null);
-            
             const projectsData = await projectService.getProjects();
             setProjects(projectsData);
         } catch (err: any) {
