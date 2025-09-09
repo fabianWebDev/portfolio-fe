@@ -19,7 +19,7 @@ const Home = () => {
                 <SocialIcon link="https://www.github.com/fabianWebDev">
                     <FaGithub />
                 </SocialIcon>
-                <SocialIcon link="https://www.linkedin.com/in/fabi%C3%A1n-campos-b992a1196/">
+                <SocialIcon link="https://www.linkedin.com/in/fabian-campos-cr/">
                     <FaLinkedin />
                 </SocialIcon>
             </SocialIconsFrame>
