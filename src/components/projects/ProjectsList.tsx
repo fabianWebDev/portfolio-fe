@@ -1,52 +1,17 @@
 import { useProjects } from "../../hooks/useProjects";
 import ProjectCard from "./ProjectCard";
 import styles from './ProjectsList.module.css';
+import Loading from "../loading/Loading";
 
 const ProjectsList = () => {
     const { projects, loading, error } = useProjects();
-    
-    console.log('Projects data:', projects);
-    console.log('Loading:', loading);
-    console.log('Error:', error);
 
     if (loading) {
-        return (
-            <div className={styles.projectsList}>
-                <div className="text-center text-gray-500">
-                    <div className="spinner-border" role="status">
-                        <span className="visually-hidden">Cargando proyectos...</span>
-                    </div>
-                    <p className="mt-2">Cargando proyectos...</p>
-                </div>
-            </div>
-        );
+        return <Loading />;
     }
 
     if (error) {
-        return (
-            <div className={styles.projectsList}>
-                <div className="text-center text-danger">
-                    <p>Error al cargar los proyectos: {error}</p>
-                    <button 
-                        className="btn btn-outline-primary btn-sm"
-                        onClick={() => window.location.reload()}
-                    >
-                        Reintentar
-                    </button>
-                </div>
-            </div>
-        );
-    }
-
-    if (!projects || projects.length === 0) {
-        return (
-            <div className={styles.projectsList}>
-                <div className="text-center text-gray-500">
-                    <p>No hay proyectos disponibles en este momento.</p>
-                    <p className="small">Vuelve a intentar más tarde.</p>
-                </div>
-            </div>
-        );
+        return "Error";
     }
 
     return (

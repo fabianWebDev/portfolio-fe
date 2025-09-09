@@ -1,0 +1,12 @@
+import { PropagateLoader } from "react-spinners";
+import styles from "./Loading.module.css";
+
+const Loading = () => {
+    return (
+        <div className={styles.loadingContainer}>
+            <PropagateLoader color="#40E0D0" />
+        </div>
+    );
+};
+
+export default Loading;
