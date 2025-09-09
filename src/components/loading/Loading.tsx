@@ -4,7 +4,7 @@ import styles from "./Loading.module.css";
 const Loading = () => {
     return (
         <div className={styles.loadingContainer}>
-            <PropagateLoader color="#40E0D0" />
+            <PropagateLoader color="#ffffff" />
         </div>
     );
 };
