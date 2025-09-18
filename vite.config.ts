@@ -31,6 +31,7 @@ export default defineConfig({
       }
     }
   },
+  publicDir: 'public',
   preview: {
     port: 4173,
     host: true
