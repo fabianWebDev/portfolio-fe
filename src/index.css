@@ -47,6 +47,7 @@
   --z-tooltip: 1070;
 
   --font-family: 'Amatic SC', cursive;
+  --font-family-secondary: 'Inter', sans-serif;
 }
 
 * {
